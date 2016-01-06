@@ -1,0 +1,3 @@
+[submodule "doc"]
+	path = doc
+	url = git@github.com:olivictor/machinate-css.wiki.git
