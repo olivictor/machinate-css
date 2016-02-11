@@ -1,0 +1,29 @@
+
+/// Clearfix
+/// -----------------------------------------------------------------
+/// Version: traditional; modern browsers
+///
+
+/// @author Victor Oliveira
+/// @group utils
+
+/// Force element to self-clear its children.
+/// 
+/// Not to be used with flexbox.
+///
+/// @example scss - Basic Usage
+///   .container {
+///     @include clearfix;
+///
+///     .child {
+///       float: left;
+///     }
+///   }
+
+@mixin clearfix {
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
