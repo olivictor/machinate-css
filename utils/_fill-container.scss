@@ -1,0 +1,35 @@
+
+/// Fill Container
+/// -----------------------------------------------------------------
+/// Version: traditional; most browsers
+/// Tags: fill absolute container parent
+///
+
+/// @author Victor Oliveira
+/// @group utils
+
+/// Fill the relative ancestor container with absolute positioning.
+/// 
+/// Usage examples: 
+/// - Backdrop
+/// - Image covers
+///
+/// @example scss - Image cover
+///   .image-wrapper {
+///     .cover {
+///       display: none;
+///     }
+///
+///     &:hover .cover {
+///       @include fill-container;
+///       display: block;
+///     }
+///   }
+
+@mixin fill-container {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
