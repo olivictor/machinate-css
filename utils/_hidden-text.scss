@@ -1,0 +1,30 @@
+
+/// Hidden Text
+/// -----------------------------------------------------------------
+/// Version: Scott Kellum; most browsers
+/// Reference: http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/ 
+/// Tags: content hidden hide text image replacement replace
+///
+
+/// @author Victor Oliveira
+/// @group utils
+
+/// Hide text while keeping it in place available for screen readers.
+///
+/// Doesn't draw a giant offset rectangle so the performance is better
+/// than the traditional `-9999px` technique.
+/// 
+/// Usage examples: 
+/// - replace content with a background image
+///
+/// @example scss - Basic Usage
+///   .logo {
+///     @include hidden-text;
+///     background: url('awesome-logo.png');
+///   }
+
+@mixin hidden-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
