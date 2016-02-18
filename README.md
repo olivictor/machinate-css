@@ -9,10 +9,12 @@ SASS composable mixins for descriptive programming
 - single responsibility
 - strong naming conventions
 
-# Workflow
+# Comments
 
-1. Add util/component
-2. Add corresponding documentation to wiki with examples
+Use sass-docs. 
+Add source reference when pertinent. 
+Add tags to make search easier.
+Rich descriptions.
 
 # Roadmap
 
