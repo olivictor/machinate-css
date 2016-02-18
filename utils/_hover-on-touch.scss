@@ -1,0 +1,36 @@
+
+/// Hover On Touch
+/// -----------------------------------------------------------------
+/// Version: css-only; most browsers
+/// Tags: touch hover mouseover mobile
+///
+
+/// @author Victor Oliveira
+/// @group utils
+
+/// Enable setting `:hover` state when user touches the screen on
+/// mobile devices.
+/// 
+/// Drawbacks: 
+/// - Requires setting `cursor: pointer` to body to allow 'unhovering'
+/// 
+/// Usage examples: 
+/// - Show dropdown menu when hovering its icon
+/// - Animate element when user hovers / touches it
+///
+/// @example scss - Dropdown menu
+///   .menu-with-dropdown {
+///     @include hover-on-touch;
+///
+///     .dropdown {
+///       display: none;
+///     }
+///
+///     &:hover .dropdown {
+///       display: block;
+///     }
+///   }
+
+@mixin hover-on-touch {
+  cursor: pointer;
+}
