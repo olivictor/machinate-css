@@ -1,0 +1,39 @@
+
+/// Offscreen
+/// -----------------------------------------------------------------
+/// Version: traditional; most browsers
+/// Reference: http://webaim.org/techniques/css/invisiblecontent/
+/// Tags: off screen content hidden hide 
+///
+
+/// @author Victor Oliveira
+/// @group utils
+
+/// Hide element while keeping it available for screen readers.
+/// 
+/// Usage examples: 
+/// - hide an useful label for blind people (screen readers don't 
+///   read `display: none` and other similar techniques)
+/// - hide input for custom radio buttons and checkboxes
+///
+/// @example scss - Basic Usage
+///   .input-to-hide {
+///     @include offscreen;
+///
+///     + label {
+///       color: $unchecked-color;
+///     }
+///
+///     &:checked + label {
+///       color: $checked-color;
+///     }
+///   }
+
+@mixin offscreen {
+  height: 1px;
+  left: -10000px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px;
+}
