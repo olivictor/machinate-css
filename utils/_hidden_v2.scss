@@ -1,0 +1,41 @@
+
+/// Hidden
+/// -----------------------------------------------------------------
+/// Version: H5BP; most browsers
+/// Reference: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+/// Tags: content hidden hide off screen offscreen
+///
+
+/// @author Victor Oliveira
+/// @group utils
+
+/// Hide element while keeping it available for screen readers.
+/// 
+/// Usage examples: 
+/// - hide an useful label for blind people (screen readers don't 
+///   read `display: none` and other similar techniques)
+/// - hide input for custom radio buttons and checkboxes
+///
+/// @example scss - Basic Usage
+///   .input-to-hide {
+///     @include hidden;
+///
+///     + label {
+///       color: $unchecked-color;
+///     }
+///
+///     &:checked + label {
+///       color: $checked-color;
+///     }
+///   }
+
+@mixin hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

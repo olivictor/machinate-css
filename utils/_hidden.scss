@@ -1,15 +1,18 @@
 
-/// Offscreen
+/// Hidden
 /// -----------------------------------------------------------------
-/// Version: traditional; most browsers
+/// Version: traditional, offscreen technique; most browsers
 /// Reference: http://webaim.org/techniques/css/invisiblecontent/
-/// Tags: off screen content hidden hide 
+/// Tags: content hidden hide off screen offscreen
 ///
 
 /// @author Victor Oliveira
 /// @group utils
 
 /// Hide element while keeping it available for screen readers.
+/// 
+/// Drawbacks: a big offscreen rectangle is still rendered by the 
+/// browser.
 /// 
 /// Usage examples: 
 /// - hide an useful label for blind people (screen readers don't 
@@ -18,7 +21,7 @@
 ///
 /// @example scss - Basic Usage
 ///   .input-to-hide {
-///     @include offscreen;
+///     @include hidden;
 ///
 ///     + label {
 ///       color: $unchecked-color;
@@ -29,7 +32,7 @@
 ///     }
 ///   }
 
-@mixin offscreen {
+@mixin hidden {
   height: 1px;
   left: -10000px;
   overflow: hidden;
