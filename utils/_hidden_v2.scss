@@ -11,6 +11,9 @@
 
 /// Hide element while keeping it available for screen readers.
 /// 
+/// Note: You should use `aria-label` or `aria-hidden` instead
+/// if you don't need to support old browsers
+/// 
 /// Usage examples: 
 /// - hide an useful label for blind people (screen readers don't 
 ///   read `display: none` and other similar techniques)

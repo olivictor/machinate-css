@@ -13,6 +13,9 @@
 ///
 /// Doesn't draw a giant offset rectangle so the performance is better
 /// than the traditional `-9999px` technique.
+///
+/// Note: You should use `aria-label` or `aria-hidden` instead
+/// if you don't need to support old browsers
 /// 
 /// Usage examples: 
 /// - replace content with a background image

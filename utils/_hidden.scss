@@ -14,6 +14,9 @@
 /// Drawbacks: a big offscreen rectangle is still rendered by the 
 /// browser.
 /// 
+/// Note: You should use `aria-label` or `aria-hidden` instead
+/// if you don't need to support old browsers
+/// 
 /// Usage examples: 
 /// - hide an useful label for blind people (screen readers don't 
 ///   read `display: none` and other similar techniques)
