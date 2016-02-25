@@ -1,0 +1,48 @@
+
+/// Show Child on Hover
+/// -----------------------------------------------------------------
+/// Version: generic; most browsers
+/// Tags: show child hover active focus dropdown tooltip
+///
+
+/// @author Victor Oliveira
+/// @group utils
+
+/// Show child element on `hover`, `focus`, `active` and active class
+///
+/// Usage examples: 
+/// - tooltips
+/// - dropdown menus
+/// 
+/// @example scss - Basic Usage
+///   .menu {
+///     @include show-child-on-interaction($selector: '.submenu');
+///
+///     .submenu {
+///       // submenu styles
+///     }
+///   }
+
+@mixin show-child-on-interaction(
+  $child-selector, 
+  $active-selector: '.active',
+  $hide-styles: ( display: none ),
+  $show-styles: ( display: block )
+) {
+  #{$child-selector} {
+    @each $property, $value in $hide-styles {
+      #{$property}: $value;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &#{$active-selector} {
+    #{$child-selector} {
+      @each $property, $value in $show-styles {
+        #{$property}: $value;
+      }
+    }
+  }
+}
