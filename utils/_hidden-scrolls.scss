@@ -1,0 +1,48 @@
+
+/// Hidden Scrolls
+/// -----------------------------------------------------------------
+/// Version: hacky; most browsers
+/// Tags: hidden hide off no invisible scrolls
+///
+
+/// @author Victor Oliveira
+/// @group utils
+
+/// Hide scrolls on child using overflow hidden 
+/// 
+/// Usage examples: 
+/// - scrollable side menu
+/// - horizontal manual slider
+///
+/// @example scss - Basic Usage
+///   .carousel {
+///     @include hidden-scrolls;
+///
+///     .list li {
+///       display: inline-block;
+///       white-space: nowrap;
+///     }
+///   }
+
+@mixin hidden-scrolls(
+  $child-selector, 
+  $horizontal: true,
+  $vertical: true,
+  $hidden-size: 20px
+) {
+  overflow: hidden;
+
+  #{$child-selector} {
+    overflow: auto;
+
+    @if ($horizontal) { 
+      margin-bottom: -$hidden-size; 
+      padding-bottom: $hidden-size; 
+    }
+
+    @if ($vertical) { 
+      margin-right: -$hidden-size; 
+      padding-right: $hidden-size; 
+    }
+  }
+}
